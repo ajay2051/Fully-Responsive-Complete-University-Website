@@ -1,38 +1,217 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home</title>
-    <link rel="stylesheet" type="text/css" href="../styles/home.css" />
-    <link rel="shortcut icon" href="../images/home.png" />
-  </head>
-  <body>
-    <section class="header">
-      <div class="nav">
-        <div class="logo">
-          <a href="./home.html"><img src="../images/logo.png" alt="" /></a>
-        </div>
-        <div class="navlinks">
-          <ul>
-            <li><a href="./home.html">HOME</a></li>
-            <li><a href="./about.html">ABOUT</a></li>
-            <li><a href="./course.html">COURSE</a></li>
-            <li><a href="./blog.html">BLOG</a></li>
-            <li><a href="./contact.html">CONTACT</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="banner-text">
-        <h1>Worlds Best University</h1>
-        <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus
-          quidem vitae praesentium nisi totam cupiditate rem libero culpa,
-          perspiciatis exercitationem?
-        </p>
-        <button>Find Out More</button>
-      </div>
-    </section>
-  </body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Home</title>
+		<link rel="stylesheet" type="text/css" href="../styles/home.css" />
+		<link rel="shortcut icon" href="../images/home.png" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+		/>
+	</head>
+	<body>
+		<section class="header">
+			<div class="nav">
+				<div class="logo">
+					<a href="./home.html"><img src="../images/logo.png" alt="" /></a>
+				</div>
+				<div class="navlinks" id="navlinks">
+					<i class="fa-solid fa-xmark" onclick="hideMenu()"></i>
+					<ul>
+						<li><a href="./home.html">HOME</a></li>
+						<li><a href="./about.html">ABOUT</a></li>
+						<li><a href="./course.html">COURSE</a></li>
+						<li><a href="./blog.html">BLOG</a></li>
+						<li><a href="./contact.html">CONTACT</a></li>
+					</ul>
+				</div>
+				<i class="fa-solid fa-bars" onclick="showMenu()"></i>
+			</div>
+			<div class="banner-text">
+				<h1>Worlds Best University</h1>
+				<p>
+					Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus
+					quidem vitae praesentium nisi totam cupiditate rem libero culpa,
+					perspiciatis exercitationem?
+				</p>
+				<button>Find Out More</button>
+			</div>
+		</section>
+
+		<!------------------Course --------------->
+
+		<div class="courses">
+			<div class="courses-heading">
+				<h1>Courses We Offer</h1>
+				<p>
+					Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus,
+					nemo!
+				</p>
+			</div>
+			<div class="courses-types">
+				<div class="courses-types-1">
+					<h2>Intermediate</h2>
+					<p>
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam
+						velit dolor praesentium aspernatur rerum magni ipsa, minima vero
+						sequi ut quisquam, nulla libero delectus alias impedit molestiae!
+						Ducimus, expedita eius?
+					</p>
+				</div>
+				<div class="courses-types-2">
+					<h2>Bachelors</h2>
+					<p>
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam
+						velit dolor praesentium aspernatur rerum magni ipsa, minima vero
+						sequi ut quisquam, nulla libero delectus alias impedit molestiae!
+						Ducimus, expedita eius?
+					</p>
+				</div>
+				<div class="courses-types-1">
+					<h2>Masters</h2>
+					<p>
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam
+						velit dolor praesentium aspernatur rerum magni ipsa, minima vero
+						sequi ut quisquam, nulla libero delectus alias impedit molestiae!
+						Ducimus, expedita eius?
+					</p>
+				</div>
+			</div>
+		</div>
+		<!---------------- Universities ------------>
+		<div class="universities">
+			<div class="uni-heading">
+				<h2>Our Global Universities</h2>
+				<p>
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint,
+					laborum!
+				</p>
+			</div>
+			<div class="uni-card">
+				<div class="uni-card-1">
+					<img src="../images/uni1.jpg" alt="" class="uni-image-1" />
+					<div class="uni-card-text">
+						<a href="#"><h3>DUBAI</h3></a>
+					</div>
+				</div>
+				<div class="uni-card-1">
+					<img src="../images/uni2.jpg" alt="" class="uni-image-1" />
+					<div class="uni-card-text">
+						<a href="#"><h3>LONDON</h3></a>
+					</div>
+				</div>
+				<div class="uni-card-1">
+					<img src="../images/uni3.jpg" alt="" class="uni-image-1" />
+					<div class="uni-card-text">
+						<a href="#"><h3>MOSCOW</h3></a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-------------- Facilities ---------------->
+		<div class="facilities">
+			<div class="facilities-heading">
+				<h2>Our Facilities</h2>
+				<p>
+					Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis,
+					accusantium!
+				</p>
+			</div>
+			<div class="facilities-card">
+				<div class="facilities-card-1">
+					<img src="../images/library.jpg" alt="" />
+					<h3>World Class Library</h3>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et at vel
+						nulla veritatis dolorem voluptate eaque optio necessitatibus animi
+						repellat?
+					</p>
+				</div>
+				<div class="facilities-card-1">
+					<img src="../images/cafe.jpg" alt="" />
+					<h3>Coffee Place</h3>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et at vel
+						nulla veritatis dolorem voluptate eaque optio necessitatibus animi
+						repellat?
+					</p>
+				</div>
+				<div class="facilities-card-1">
+					<img src="../images/playground.jpg" alt="" />
+					<h3>Largest Playground</h3>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et at vel
+						nulla veritatis dolorem voluptate eaque optio necessitatibus animi
+						repellat?
+					</p>
+				</div>
+			</div>
+		</div>
+		<!------------------Testimonials------------------>
+		<div class="testimonials">
+			<div class="testimonials-head">
+				<h2>What Our Students Say</h2>
+				<p>
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo,
+					eligendi?
+				</p>
+			</div>
+			<div class="testimonials-row">
+				<div class="testimonial-row-1">
+					<div class="testimonial-img">
+						<img src="../images/boy.jpg" alt="" />
+					</div>
+					<div class="testimonial-para">
+						<p>
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis
+							officia magnam officiis nihil repellat! Suscipit laborum
+							voluptatibus a facere laboriosam.
+						</p>
+						<h3>Andrew Clarke</h3>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+					</div>
+				</div>
+				<div class="testimonial-row-1">
+					<div class="testimonial-img">
+						<img src="../images/girl.jpg" alt="" />
+					</div>
+					<div class="testimonial-para">
+						<p>
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis
+							officia magnam officiis nihil repellat! Suscipit laborum
+							voluptatibus a facere laboriosam.
+						</p>
+						<h3>Ria Johnson</h3>
+
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star-half"></i>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!------------------Call To Action---------------->
+		<div class="calltoaction">
+			<h2>Enroll Our Online Classes</h2>
+			<button><a href="../pages/contact.html">Contact Us</a></button>
+		</div>
+		<div class="ajay"></div>
+		<!-------------Footer------------->
+
+		<footer class="footer">
+			<h3>&copy All Rights Reserved. Designed & Developed By Ajay Thakur</h3>
+			<a href="#"><i class="fas fa-arrow-up"></i></a>
+		</footer>
+		<script src="../js/script.js"></script>
+	</body>
 </html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Contact Us</title>
+		<link rel="stylesheet" type="text/css" href="../styles/contact.css" />
+		<link rel="shortcut icon" href="../images/contact.png" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+		/>
+	</head>
+	<body>
+		<section class="header">
+			<div class="nav">
+				<div class="logo">
+					<a href="./home.html"><img src="../images/logo.png" alt="" /></a>
+				</div>
+				<div class="navlinks" id="navlinks">
+					<i class="fa-solid fa-xmark" onclick="hideMenu()"></i>
+					<ul>
+						<li><a href="./home.html">HOME</a></li>
+						<li><a href="./about.html">ABOUT</a></li>
+						<li><a href="./course.html">COURSE</a></li>
+						<li><a href="./blog.html">BLOG</a></li>
+						<li><a href="./contact.html">CONTACT</a></li>
+					</ul>
+				</div>
+				<i class="fa-solid fa-bars" onclick="showMenu()"></i>
+			</div>
+			<div class="banner-text">
+				<h1>Contact Us</h1>
+				<p>
+					Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus
+					quidem vitae praesentium nisi totam cupiditate rem libero culpa,
+					perspiciatis exercitationem?
+				</p>
+				<!-- <button>Find Out More</button> -->
+			</div>
+		</section>
+		<!------------Contact Us Body----------------------->
+		<div class="contact-body">
+			<div class="contact-details">
+				<div class="number">
+					<i class="fa-solid fa-phone"></i>
+					<p>+1 25615646451<br /><span>Monday-Friday 10AM To 6PM</span></p>
+				</div>
+				<div class="email">
+					<i class="fa-solid fa-envelope"></i>
+					<p>abcde@gmail.com<br /><span>Email Your Query</span></p>
+				</div>
+				<div class="address">
+					<i class="fa-solid fa-location-dot"></i>
+					<p>Code Tower, Floor25, Sheikh Road<br />Dubai, UAE</p>
+				</div>
+			</div>
+			<div class="contact-form">
+				<h3>Contact Us</h3>
+				<form action="">
+					<div class="name">
+						<input type="text" placeholder="Enter Name" />
+					</div>
+					<div class="email">
+						<input type="text" placeholder="Email" />
+					</div>
+					<div class="subject">
+						<input type="text" placeholder="Subject" />
+					</div>
+					<div class="message">
+						<textarea cols="20" placeholder="Message"></textarea>
+					</div>
+					<div class="submit">
+						<input type="button" value="Submit" />
+					</div>
+				</form>
+			</div>
+		</div>
+		<!--------------Social Media-------------->
+		<div class="social-media">
+			<h3>Connect</h3>
+			<a href="#"><i class="fa-brands fa-facebook-square"></i></a>
+			<a href="#"><i class="fa-brands fa-twitter-square"></i></a>
+			<a href="#"><i class="fa-brands fa-instagram-square"></i></a>
+			<a href="#"><i class="fa-brands fa-linkedin"></i></a>
+			<a href="#"><i class="fa-brands fa-github-square"></i></a>
+		</div>
+		<!----------Map------------->
+		<div class="map">
+			<iframe
+				src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3610.178510024343!2d55.272187714530226!3d25.197201837884773!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f43348a67e24b%3A0xff45e502e1ceb7e2!2sBurj%20Khalifa!5e0!3m2!1sen!2snp!4v1645882966259!5m2!1sen!2snp"
+				width="100%"
+				height="450"
+				style="border: 0"
+				allowfullscreen=""
+				loading="lazy"
+			></iframe>
+		</div>
+		<!----------------------Footer------------->
+		<footer class="footer">
+			<h3>&copy All Rights Reserved. Designed & Developed By Ajay Thakur</h3>
+			<a href="#"><i class="fas fa-arrow-up"></i></a>
+		</footer>
+		<script src="../js/script.js"></script>
+	</body>
+</html>

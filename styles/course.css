@@ -1,0 +1,218 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Poppins", sans-serif;
+}
+*::after,
+*::before {
+	box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+body {
+	overflow-x: hidden;
+}
+.header {
+	position: relative;
+	min-height: 100vh;
+	width: 100%;
+	background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+		url(../images/coursepagebanner.jpg);
+	background-position: center;
+	background-size: cover;
+}
+
+.header .nav {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 1% 2%;
+}
+.header .nav .navlinks ul {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 1.5rem;
+}
+.header .nav .navlinks ul li {
+	list-style: none;
+	position: relative;
+}
+.header .nav .navlinks ul li::after {
+	content: "";
+	width: 00%;
+	height: 2px;
+	margin: auto;
+	display: block;
+	background-color: white;
+	transition: all 0.3s ease-out;
+}
+.header .nav .navlinks ul li:hover::after {
+	width: 100%;
+}
+.header .nav .navlinks i {
+	display: none;
+}
+.header .nav i {
+	display: none;
+}
+
+.header .nav .navlinks ul li a {
+	position: relative;
+	color: white;
+	text-decoration: none;
+	font-size: 1.5rem;
+}
+.header .banner-text {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+	width: 80%;
+}
+.header .banner-text h1,
+.header .banner-text p {
+	color: white;
+}
+.header .banner-text h1 {
+	font-size: 3rem;
+	font-weight: 400;
+}
+.header .banner-text p {
+	font-size: 1.5rem;
+}
+.header .banner-text button {
+	display: inline-block;
+	padding: 1%;
+	cursor: pointer;
+	background: transparent;
+	color: white;
+	border: 1px solid white;
+	font-size: 1.2rem;
+	margin-top: 1vh;
+	transition: all 0.3s ease-out;
+}
+.header .banner-text button:hover {
+	background-color: white;
+	color: #000;
+}
+
+@media (max-width: 700px) {
+	.header .nav .navlinks {
+		position: absolute;
+		background: aquamarine;
+		height: 100vh;
+		width: 50%;
+		top: 0;
+		right: -50%;
+		z-index: 2;
+
+		transition: all 0.3s ease-out;
+	}
+
+	.header .nav .navlinks ul {
+		flex-wrap: wrap;
+		flex-direction: column;
+	}
+	.header .nav .navlinks i {
+		display: block;
+		color: white;
+		cursor: pointer;
+		margin: 10px;
+		font-size: 1.5rem;
+	}
+	.header .nav i {
+		display: block;
+		color: white;
+		font-size: 1.5rem;
+		cursor: pointer;
+		margin-right: 10px;
+	}
+}
+
+/*-------------------Course-----------------*/
+.courses {
+	position: relative;
+	text-align: center;
+	width: 100%;
+	margin: auto;
+	padding: 2%;
+}
+.courses .courses-heading h1 {
+	font-weight: 400;
+}
+
+.courses .courses-types {
+	position: relative;
+	display: flex;
+	margin: 2%;
+	align-items: center;
+	justify-content: center;
+	gap: 5vw;
+}
+.courses .courses-types h2 {
+	margin-bottom: 10px;
+	font-weight: 600;
+}
+
+.courses .courses-types .courses-types-1,
+.courses .courses-types .courses-types-2,
+.courses .courses-types .courses-types-3 {
+	box-shadow: 0 0 10px gray;
+	padding: 2%;
+	border-radius: 10px;
+	background-color: rgba(22, 11, 233, 0.008);
+}
+
+@media (max-width: 950px) {
+	.courses .courses-types {
+		flex-wrap: wrap;
+		flex-direction: column;
+		margin-top: 5vh;
+	}
+}
+
+/*-------------------------Footer---------------------------*/
+
+footer {
+	position: relative;
+	padding: 2%;
+	background: linear-gradient(
+		135deg,
+		rgba(0, 0, 255, 0.419),
+		rgba(255, 0, 0, 0.405)
+	);
+}
+footer h3 {
+	text-align: center;
+	font-size: 2rem;
+	font-weight: 400;
+	color: beige;
+}
+
+footer i {
+	position: absolute;
+	top: 50%;
+	right: 5%;
+	cursor: pointer;
+	font-size: 2rem;
+	color: white;
+}
+
+@media (max-width: 500px) {
+	footer h3 {
+		font-size: 1rem;
+	}
+	footer {
+		padding: 5%;
+	}
+	footer i {
+		font-size: 1rem;
+	}
+}

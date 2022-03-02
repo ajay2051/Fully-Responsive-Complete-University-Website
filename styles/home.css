@@ -1,86 +1,473 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Poppins", sans-serif;
 }
 *::after,
 *::before {
-  box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+body {
+	overflow-x: hidden;
 }
 .header {
-  position: relative;
-  min-height: 100vh;
-  width: 100%;
-  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url(../images/homepagebanner.jpg);
-  background-position: center;
-  background-size: cover;
+	position: relative;
+	min-height: 100vh;
+	width: 100%;
+	background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+		url(../images/homepagebanner.jpg);
+	background-position: center;
+	background-size: cover;
 }
 
 .header .nav {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 1% 2%;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 1% 2%;
 }
 .header .nav .navlinks ul {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1.5rem;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 1.5rem;
 }
 .header .nav .navlinks ul li {
-  list-style: none;
+	list-style: none;
+	position: relative;
 }
 .header .nav .navlinks ul li::after {
-  content: "";
-  width: 00%;
-  height: 2px;
-  margin: auto;
-  display: block;
-  background-color: aqua;
-  transition: all 0.3s ease-out;
+	content: "";
+	width: 00%;
+	height: 2px;
+	margin: auto;
+	display: block;
+	background-color: white;
+	transition: all 0.3s ease-out;
 }
 .header .nav .navlinks ul li:hover::after {
-  width: 100%;
+	width: 100%;
+}
+.header .nav .navlinks i {
+	display: none;
+}
+.header .nav i {
+	display: none;
 }
 
 .header .nav .navlinks ul li a {
-  color: white;
-  text-decoration: none;
-  font-size: 1.5rem;
+	position: relative;
+	color: white;
+	text-decoration: none;
+	font-size: 1.5rem;
 }
 .header .banner-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  width: 80%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+	width: 80%;
 }
 .header .banner-text h1,
 .header .banner-text p {
-  color: white;
+	color: white;
 }
 .header .banner-text h1 {
-  font-size: 3rem;
-  font-weight: 400;
+	font-size: 3rem;
+	font-weight: 400;
 }
 .header .banner-text p {
-  font-size: 1.5rem;
+	font-size: 1.5rem;
 }
 .header .banner-text button {
-  display: inline-block;
-  padding: 1%;
-  cursor: pointer;
-  background: rgba(0, 0, 0, 0.6);
-  color: white;
-  border: 1px solid aqua;
-  font-size: 1.2rem;
-  margin-top: 1vh;
+	display: inline-block;
+	padding: 1%;
+	cursor: pointer;
+	background: transparent;
+	color: white;
+	border: 1px solid white;
+	font-size: 1.2rem;
+	margin-top: 1vh;
+	transition: all 0.3s ease-out;
+}
+.header .banner-text button:hover {
+	background-color: white;
+	color: #000;
 }
 
 @media (max-width: 700px) {
+	.header .nav .navlinks {
+		position: absolute;
+		background: aquamarine;
+		height: 100vh;
+		width: 50%;
+		top: 0;
+		right: -50%;
+		z-index: 2;
+
+		transition: all 0.3s ease-out;
+	}
+
+	.header .nav .navlinks ul {
+		flex-wrap: wrap;
+		flex-direction: column;
+	}
+	.header .nav .navlinks i {
+		display: block;
+		color: white;
+		cursor: pointer;
+		margin: 10px;
+		font-size: 1.5rem;
+	}
+	.header .nav i {
+		display: block;
+		color: white;
+		font-size: 1.5rem;
+		cursor: pointer;
+		margin-right: 10px;
+	}
+}
+
+/* Courses */
+.courses {
+	position: relative;
+	text-align: center;
+	width: 100%;
+	margin: auto;
+	padding: 2%;
+}
+.courses .courses-heading h1 {
+	font-weight: 400;
+}
+
+.courses .courses-types {
+	position: relative;
+	display: flex;
+	margin: 2%;
+	align-items: center;
+	justify-content: center;
+	gap: 5vw;
+}
+.courses .courses-types h2 {
+	margin-bottom: 10px;
+	font-weight: 600;
+}
+
+.courses .courses-types .courses-types-1,
+.courses .courses-types .courses-types-2,
+.courses .courses-types .courses-types-3 {
+	box-shadow: 0 0 10px gray;
+	padding: 2%;
+	border-radius: 10px;
+	background-color: rgba(22, 11, 233, 0.008);
+}
+
+@media (max-width: 950px) {
+	.courses .courses-types {
+		flex-wrap: wrap;
+		flex-direction: column;
+		margin-top: 5vh;
+	}
+}
+/* Universities */
+.universities .uni-heading {
+	position: relative;
+	text-align: center;
+	margin: 1%;
+}
+
+.universities .uni-heading h2 {
+	font-size: 2rem;
+	font-weight: 400;
+}
+
+.universities .uni-card {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 3rem;
+	padding: 2%;
+}
+
+.universities .uni-card .uni-card-1 {
+	position: relative;
+	background: rgb(128, 128, 128);
+	transition: all 0.5s ease-out;
+	box-shadow: 0 0 20px grey;
+}
+.universities .uni-card .uni-card-1 img {
+	height: 50vh;
+	width: 25vw;
+}
+
+.universities .uni-card .uni-card-1::before,
+.universities .uni-card .uni-card-1::after {
+	content: "";
+	position: absolute;
+	top: 1.25em;
+	right: 1.25em;
+	bottom: 1.25em;
+	left: 1.25em;
+	transition: all ease-out 0.5s;
+}
+
+.universities .uni-card .uni-card-1::before {
+	/* background: rgba(0, 0, 0, 0.118); */
+	border-top: 1px solid white;
+	border-bottom: 1px solid white;
+	transform: scale(0, 1);
+	transition: transform ease-out 0.5s;
+}
+
+.universities .uni-card .uni-card-1:hover::before {
+	transform: scale(1.05, 1);
+}
+.universities .uni-card .uni-card-1::after {
+	/* background: rgba(0, 0, 0, 0.118); */
+	border-right: 1px solid white;
+	border-left: 1px solid white;
+	transform: scale(1, 0);
+	transition: transform ease-out 0.5s;
+}
+
+.universities .uni-card .uni-card-1:hover::after {
+	transform: scale(1, 1.05);
+}
+
+.universities .uni-card .uni-card-1 .uni-image-1 {
+	max-width: 100%;
+	z-index: 1;
+	display: block;
+	transition: opacity 0.3s ease-out;
+}
+.universities .uni-card .uni-card-1:hover .uni-image-1 {
+	opacity: 0.5;
+	transform: scale(1.04);
+}
+.universities .uni-card .uni-card-1 .uni-card-text {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: aliceblue;
+	opacity: 0;
+	z-index: 10;
+	transition: opacity ease-out 0.5s;
+}
+.universities .uni-card .uni-card-1 .uni-card-text a {
+	color: aliceblue;
+	font-size: 2rem;
+	text-decoration: none;
+}
+
+.universities .uni-card .uni-card-1:hover .uni-card-text {
+	opacity: 1;
+}
+
+@media (max-width: 768px) {
+	.universities .uni-card {
+		flex-wrap: wrap;
+		flex-direction: column;
+	}
+	.universities .uni-card .uni-card-1 img {
+		position: relative;
+		width: 90vw;
+	}
+}
+
+/*---------- Facilities -------------*/
+.facilities .facilities-heading {
+	position: relative;
+	text-align: center;
+	margin-top: 10vh;
+}
+
+.facilities .facilities-heading h2 {
+	font-size: 2rem;
+	font-weight: 400;
+}
+
+.facilities .facilities-card {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 3rem;
+	margin: 10vh 10vw;
+}
+
+.facilities .facilities-card .facilities-card-1 {
+	position: relative;
+	text-align: center;
+}
+
+.facilities .facilities-card .facilities-card-1 img {
+	height: 50vh;
+	width: 30vw;
+}
+
+.facilities .facilities-card .facilities-card-1 h3 {
+	margin-top: 3vh;
+	font-size: 1.5rem;
+	font-weight: 400;
+}
+/* .facilities .facilities-card .facilities-card-1 p {
+	text-align: center;
+} */
+
+@media (max-width: 768px) {
+	body {
+		overflow-x: hidden;
+	}
+	.facilities .facilities-card {
+		flex-wrap: wrap;
+		flex-direction: column;
+		margin: 1%;
+	}
+	.facilities .facilities-card .facilities-card-1 img {
+		width: 90vw;
+	}
+}
+
+/*----------------Testimonials----------------*/
+
+.testimonials .testimonials-row .testimonial-img img {
+	height: 80px;
+	width: 80px;
+	border-radius: 50%;
+}
+
+.testimonials .testimonials-head {
+	position: relative;
+	text-align: center;
+	margin: 1%;
+}
+.testimonials .testimonials-head h2 {
+	font-size: 2rem;
+	font-weight: 400;
+}
+
+.testimonials .testimonials-row {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 3rem;
+	margin: 2% 5%;
+}
+.testimonials .testimonials-row .testimonial-row-1 {
+	display: flex;
+	gap: 2rem;
+	align-items: center;
+	justify-content: center;
+	background-color: rgba(128, 128, 128, 0.145);
+	padding: 1%;
+	border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+	.testimonials .testimonials-row {
+		flex-wrap: wrap;
+		flex-direction: column;
+	}
+	.testimonials .testimonials-row .testimonial-row-1 {
+		padding: 2%;
+	}
+}
+/*------------------Call To Action------------*/
+.calltoaction {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	width: 90%;
+	margin: 50px auto;
+	padding: 5%;
+	background-image: url(../images/cafe.jpg);
+}
+
+.calltoaction h2 {
+	font-size: clamp(1.5rem, 3rem, 4rem);
+	font-weight: 400;
+}
+
+.calltoaction button {
+	font-size: 2rem;
+	padding: 1%;
+	background-color: black;
+	border: none;
+	border-radius: 20px;
+	margin-top: 15px;
+	transition: all 0.3s ease-out;
+}
+.calltoaction button a {
+	color: white;
+	text-decoration: none;
+}
+.calltoaction button:hover {
+	background-color: white;
+
+	border-radius: 20px;
+	border: 1px solid black;
+}
+
+.calltoaction button:hover a {
+	color: black;
+}
+
+@media (max-width: 500px) {
+	.calltoaction h2 {
+		font-size: 1.2rem;
+	}
+	.calltoaction button a {
+		font-size: 1.2rem;
+		padding: 10px 20px;
+	}
+}
+
+/*---------------Footer---------------*/
+footer {
+	position: relative;
+	padding: 2%;
+	background: linear-gradient(
+		135deg,
+		rgba(0, 0, 255, 0.419),
+		rgba(255, 0, 0, 0.405)
+	);
+}
+footer h3 {
+	text-align: center;
+	font-size: 2rem;
+	font-weight: 400;
+	color: beige;
+}
+
+footer i {
+	position: absolute;
+	top: 50%;
+	right: 5%;
+	cursor: pointer;
+	font-size: 2rem;
+	color: white;
+}
+
+@media (max-width: 500px) {
+	footer h3 {
+		font-size: 1rem;
+	}
+	footer {
+		padding: 5%;
+	}
+	footer i {
+		font-size: 1rem;
+	}
 }
